@@ -1,9 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+
 <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width,height=device-height"> 
 
 <title>Untitled Document</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
@@ -11,23 +13,76 @@
 $(document).ready(function(){
    $(window).scroll(function(e){
     // alert("ok");
-	 $(".footer").css({"bottom":"0px","left":"0px","background":"#000"}); 
+	 $(".send_messages").css({"bottom":"0px","left":"0px"}); 
    }); 
 });
 </script>
 
-<link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 
-<p>this is an text <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-this is an text <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-this is an text <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-this is an text <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
-
-<div class="footer">
-	Footer text
+<!--Chat-->
+<div class="sender_message">
+	<h1>Shahzaib Idrees</h1>
+    <p>Hello How are you</p>
 </div>
+
+
+<div class="received_message">
+	<h1>Shahzaib Idrees</h1>
+    <p>Hello How are you</p>
+</div>
+
+<div class="received_message">
+	<h1>Shahzaib Idrees</h1>
+    <p>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+    </p>
+</div>
+
+
+<div class="sender_message">
+	<h1>Shahzaib Idrees</h1>
+    <p>Hello How are you</p>
+</div>
+
+<div class="sender_message">
+	<h1>Shahzaib Idrees</h1>
+    <p>Hello How are you</p>
+</div>
+
+<div class="received_message">
+	<h1>Shahzaib Idrees</h1>
+    <p>Hello How are you</p>
+</div>
+
+<div class="sender_message">
+	<h1>Shahzaib Idrees</h1>
+    <p>Hello How are you</p>
+</div>
+
+<div class="sender_message">
+	<h1>Shahzaib Idrees</h1>
+     <p>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+    </p>
+    
+ </div>
+
+<!--Chat-->
+
+<div class="saperator"><br /><br /><br /><br /></div>
+
+<!--Message Send Bar-->
+<div class="send_messages">
+<center>
+	<input type="text" />
+    <input type="button" value="send" />
+</center>
+</div>
+<!--Message Send Bar-->
+
+
 </body>
 </html>
