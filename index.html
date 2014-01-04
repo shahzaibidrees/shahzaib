@@ -1,87 +1,142 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+
+<!--
+  ~ /*******************************************************************************
+  ~  jquery.mb.components
+  ~  file: demo_left.html
+  ~
+  ~  Copyright (c) 2001-2013. Matteo Bicocchi (Pupunzi);
+  ~  Open lab srl, Firenze - Italy
+  ~  email: matteo@open-lab.com
+  ~  site: 	http://pupunzi.com
+  ~  blog:	http://pupunzi.open-lab.com
+  ~ 	http://open-lab.com
+  ~
+  ~  Licences: MIT, GPL
+  ~  http://www.opensource.org/licenses/mit-license.php
+  ~  http://www.gnu.org/licenses/gpl.html
+  ~
+  ~  last modified: 02/10/13 22.42
+  ~  ******************************************************************************/
+  -->
+
+<html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>mb.extruder</title>
+    <style type="text/css">
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            margin:10px;
+        }
+        .wrapper{
+            position:relative;
+            font-family:Arial, Helvetica, sans-serif;
+            padding-top:90px;
+            padding-left:50px;
+            width:80%;
+            margin:auto
+        }
+        .wrapper .text{
+            font-family:Arial, Helvetica, sans-serif;
+            padding-top:50px;
+        }
+        .wrapper h1{
+            font-family:Arial, Helvetica, sans-serif;
+            font-size:26px;
+        }
+        .longText{
+            margin-top:20px;
+            width:600px;
+            font:18px/24px Arial, Helvetica, sans-serif;
+            color:gray;
+        }
+        span.btn{
+            padding:10px;
+            display:inline-block;
+            cursor:pointer;
+            font:12px/14px Arial, Helvetica, sans-serif;
+            color:#aaa;
+            background-color:#eee;
+            -moz-border-radius:10px;
+            -webkit-border-radius:10px;
+            -moz-box-shadow:#999 2px 0px 3px;
+            -webkit-box-shadow:#999 2px 0px 3px;
+        }
+        span.btn:hover{
+            background-color:#000;
+        }
 
-<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width,height=device-height"> 
+            /*
+            custom style for extruder
+            */
 
-<title>Untitled Document</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
+        .extruder.left.a .flap{
+            font-size:18px;
+            color:white;
+            top:0;
+            padding:10px 0 10px 10px;
+            background:#772B14;
+            width:30px;
+            position:absolute;
+            right:0;
+            -moz-border-radius:0 10px 10px 0;
+            -webkit-border-top-right-radius:10px;
+            -webkit-border-bottom-right-radius:10px;
+            -moz-box-shadow:#666 2px 0px 3px;
+            -webkit-box-shadow:#666 2px 0px 3px;
+        }
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        .extruder.left.a .content{
+            border-right:3px solid #772B14;
+        }
 
-<script language="javascript">
-$(document).ready(function(){
-   $(window).scroll(function(e){
-    // alert("ok");
-	 $(".send_messages").css({"bottom":"0px","left":"0px"}); 
-   }); 
-});
-</script>
+        .extruder.top .optionsPanel .panelVoice a:hover{
+            color:#fff;
+            background: url("elements/black_op_30.png");
+            border-bottom:1px solid #000;
+        }
+        .extruder.top .optionsPanel .panelVoice a{
+            border-bottom:1px solid #000;
+        }
 
+        .extruder.left.a .flap .flapLabel{
+            background:#772B14;
+        }
+    </style>
+
+    <link href="css/mbExtruder.css" media="all" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="inc/jquery.hoverIntent.min.js"></script>
+    <script type="text/javascript" src="inc/jquery.mb.flipText.js"></script>
+    <script type="text/javascript" src="inc/mbExtruder.js"></script>
+    <script type="text/javascript">
+
+
+
+        $(function(){
+            $("#extruderLeft").buildMbExtruder({
+                position:"left",
+                width:250,
+                extruderOpacity:.8,
+                hidePanelsOnClose:true,
+                accordionPanels:true,
+                onExtOpen:function(){},
+                onExtContentLoad:function(){},
+                onExtClose:function(){}
+            });
+        });
+
+    </script>
 </head>
-
 <body>
 
-<!--Chat-->
-<div class="sender_message">
-	<h1>Shahzaib Idrees</h1>
-    <p>Hello How are you</p>
-</div>
 
-
-<div class="received_message">
-	<h1>Shahzaib Idrees</h1>
-    <p>Hello How are you</p>
-</div>
-
-<div class="received_message">
-	<h1>Shahzaib Idrees</h1>
-    <p>
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-    </p>
-</div>
-
-
-<div class="sender_message">
-	<h1>Shahzaib Idrees</h1>
-    <p>Hello How are you</p>
-</div>
-
-<div class="sender_message">
-	<h1>Shahzaib Idrees</h1>
-    <p>Hello How are you</p>
-</div>
-
-<div class="received_message">
-	<h1>Shahzaib Idrees</h1>
-    <p>Hello How are you</p>
-</div>
-
-<div class="sender_message">
-	<h1>Shahzaib Idrees</h1>
-    <p>Hello How are you</p>
-</div>
-
-<div class="sender_message">
-	<h1>Shahzaib Idrees</h1>
-     <p>
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-    </p>
+        <div id="extruderLeft" class="{title:'Chat Box'}">
+        		<p style="color:#FFF;">This is an text</p>
+        </div>
     
- </div>
-
-<!--Chat-->
-
-<div class="saperator"><br /><br /><br /><br /></div>
-
-<!--Message Send Bar-->
-<div class="send_messages">
-<center>
-	<input type="text" />
-    <input type="button" value="send" />
-</center>
-</div>
-<!--Message Send Bar-->
 
 
 </body>
