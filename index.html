@@ -1,77 +1,17 @@
-<!doctype html>
-<html lang="en">
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
-<style type="text/css">
-
-div.panel {
-  display:none;
-  position: absolute;
-  top: 0;
-  width:70%;
-  right:0%;
-  height: 100%;
-  z-index: 3;
-  margin: 0;
-  overflow:hidden;
-    background-color:black;
-}
-div.home {
-    display:none;
-    font-family:arial;
-    color:white;
-    padding:50px;
-    overflow:hidden;
-}
-span.close {
-    position:absolute;
-    right:10px;
-    top:15px;
-    cursor:pointer;
-}
-</style>
-
-<script src="jquery.min.js"></script>
-<script language="javascript">
-
-$(document).ready(function() {
-    $('#home').on('click', function() {
-        $('div.panel').animate({
-            'width': 'show'
-        }, 1000, function() {
-            $('div.home').fadeIn(500);
-        });
-    });
-
-
-
-    $('span.close').on('click', function() {
-        $('div.home').fadeOut(500, function() {
-            $('div.panel').animate({
-                'width': 'hide'
-            }, 1000);
-        });
-    });
-});
-
-</script>
-
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
 </head>
 
-
 <body>
-    <ul class="menu">
-        <li><a id="home" href="#">Home</a></li>
-        <li><a id="about-me" href="#">About Me</a></li>
-    </ul>
 
-<div class="panel">
-    <div class="home">
-    <span class="close"><input type="button" value="close"></span>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id ligula elit, vitae tincidunt massa. Vestibulum quis tempus lectus. Vestibulum diam dolor, tristique eget tincidunt eu, posuere nec nulla. Nulla a sollicitudin diam. Nunc venenatis dui in turpis ultricies semper. Nulla justo nibh, volutpat nec rutrum id, viverra ac nulla. Maecenas elit felis, rhoncus sit amet imperdiet eget, ultricies ut lorem. Praesent sed felis diam</p>
-    </div>
-    </div>
+<input type="text" /><br />
+<input type="text" /><br />
+<input type="text" /><br />
+<input type="text" /><br />
+<input type="file" />
 
 
 </body>
