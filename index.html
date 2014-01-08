@@ -3,16 +3,78 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script language="javascript">
+if (/Android/i.test(navigator.userAgent)) {
+	$('#nav-handler').on('click', function(e){
+		e.preventDefault();
+		var $mainContainer = $('#main-container');
+		if ($mainContainer.hasClass('nav-handler-checked')) {
+			$mainContainer.removeClass('nav-handler-checked');
+		} else {
+			$mainContainer.addClass('nav-handler-checked');
+		}
+	});
+}
+</script>
+
 </head>
 
 <body>
 
-<input type="text" /><br />
-<input type="text" /><br />
-<input type="text" /><br />
-<input type="text" /><br />
-<input type="file" />
+<input type="checkbox" id="nav-handler">
 
+<nav id="nav">
+	<ul>
+		<li><a href="#">Nav Item 1</a></li>
+		<li><a href="#">Nav Item 2</a></li>
+		<li><a href="#">Nav Item 3</a></li>
+	</ul>
+</nav>
+
+<main id="main-container">
+
+	<header id="header">
+		<label id="menu-button" for="nav-handler">Menu</label>
+	</header>
+
+	<section id="content-container">
+		<article id="content">
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+			<p>This is a barebones slide out navigation demo.</p>
+		</article>
+	</section>
+
+</main>
 
 </body>
 </html>
