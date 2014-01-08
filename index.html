@@ -1,80 +1,70 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-<link href="style.css" rel="stylesheet" type="text/css" />
-
-<script language="javascript">
-if (/Android/i.test(navigator.userAgent)) {
-	$('#nav-handler').on('click', function(e){
-		e.preventDefault();
-		var $mainContainer = $('#main-container');
-		if ($mainContainer.hasClass('nav-handler-checked')) {
-			$mainContainer.removeClass('nav-handler-checked');
-		} else {
-			$mainContainer.addClass('nav-handler-checked');
-		}
-	});
-}
-</script>
-
-</head>
-
-<body>
-
-<input type="checkbox" id="nav-handler">
-
-<nav id="nav">
-	<ul>
-		<li><a href="#">Nav Item 1</a></li>
-		<li><a href="#">Nav Item 2</a></li>
-		<li><a href="#">Nav Item 3</a></li>
-	</ul>
-</nav>
-
-<main id="main-container">
-
-	<header id="header">
-		<label id="menu-button" for="nav-handler">Menu</label>
-	</header>
-
-	<section id="content-container">
-		<article id="content">
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-			<p>This is a barebones slide out navigation demo.</p>
-		</article>
-	</section>
-
-</main>
-
-</body>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="APP TITLE">
+        
+		<link rel="stylesheet" href="normalize.css">
+		<link rel="stylesheet" href="styles.css">
+		<script src="jquery.min.js"></script>
+		<script src="jquery.mobile-menu.js"></script>
+		<script>
+			$(function(){
+				$("body").mobile_menu({
+					menu: ['#main-nav ul', '#secondary-nav ul'],
+      		menu_width: 200,
+      		prepend_button_to: '#mobile-bar'
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<nav id="mobile-bar"></nav>
+			
+			<nav id="main-nav">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Nav 2</a></li>
+					<li><a href="#">Nav 3</a></li>
+					<li><a href="#">Nav 4</a></li>
+					<li><a href="#">Nav 5</a></li>
+					<li><a href="#">Nav 6</a></li>
+				</ul>
+			</nav>
+			
+			<nav id="secondary-nav">
+				<ul>
+					<li><a href="#">Secondary Nav 1</a></li>
+					<li><a href="#">Secondary Nav 2</a></li>
+					<li><a href="#">Secondary Nav 3</a></li>
+					<li><a href="#">Secondary Nav 4</a></li>
+					<li><a href="#">Secondary Nav 5</a></li>
+					<li><a href="#">Secondary Nav 6</a></li>
+				</ul>
+			</nav>
+			<h1>HEADER</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis velit eaque earum beatae assumenda doloribus debitis. Soluta voluptatum natus architecto possimus excepturi debitis expedita magnam nemo delectus et exercitationem ipsa.</p>
+		</header>
+		<section>
+			<h2>CONTENT</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis velit eaque earum beatae assumenda doloribus debitis. Soluta voluptatum natus architecto possimus excepturi debitis expedita magnam nemo delectus et exercitationem ipsa.</p>
+			
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis velit eaque earum beatae assumenda doloribus debitis. Soluta voluptatum natus architecto possimus excepturi debitis expedita magnam nemo delectus et exercitationem ipsa.</p>
+			
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis velit eaque earum beatae assumenda doloribus debitis. Soluta voluptatum natus architecto possimus excepturi debitis expedita magnam nemo delectus et exercitationem ipsa.</p>
+		</section>
+		
+		<footer>
+			<h1>FOOTER</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis velit eaque earum beatae assumenda doloribus debitis. Soluta voluptatum natus architecto possimus excepturi debitis expedita magnam nemo delectus et exercitationem ipsa.</p>
+		</footer>
+	</body>
 </html>
