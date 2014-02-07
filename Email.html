@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="js/jquery-1.8.3.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.Storage.js"></script>
+    <script type="text/javascript" src="js/jquery.jsonp-2.1.3.min.js"></script>
+    <link href="styles/style.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //alert("Document ready");
+            $("#btnSendEmail").click(function () {
+
+               // alert("button clicked.");
+                var senderEmail = $.Storage.get("Email");
+                sendEmail(senderEmail);
+            });
+                if ($.Storage.get("UserName") == null || $.Storage.get("UserName") == "")
+                { window.location.href = 'index.html' }
+
+           
+                var online = navigator.onLine;    // Detecting the internet connection
+                if (online) {
+                    // do your stuff
+                } else {
+                    alert('You\'re Offline now...');
+                    return false;
+                }          
+        });
+
+    </script>
+    <script type="text/javascript">
+        setTimeout(function () {
+            var name = $.Storage.get("UserName");
+            //alert(name);
+            $("#mainname").text(name);
+            $("#txtName").val(name);
+            //alert($("#txtName").val());
+
+            var email = $.Storage.get("Email");
+            $("#txtEmailFrom").val(email);
+
+            //alert("Hello")
+        }, 100);
+
+    </script>
+
+    <script type="text/javascript">
+        function sendEmail(senderEmail) {
+            //alert("Hello");
+            var messageto = $('#txtEmailTo').val();
+            alert("MessageTo: " + messageto);
+            var subject = $('#txtSubject').val();
+            //alert("Subject: " + subject);
+            $.ajax(
+{
+    type: "POST",
+    url: "http://business.2bvision.com/Vcard.asmx/Email",
+    //url: "http://localhost:3016/Vcard/Vcard.asmx/Email",
+    data: "{'messagefrom': '" + senderEmail + "','messageto':'" + messageto + "','subject': '" + subject + "','message': '" + $('#txtMessage').val() + "'}",
+    //data: "{'Mobile': '923334127753'}",
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+
+
+    success: function (response, status) {
+       
+    },
+    failure: function (msg) {
+        alert(msg);
+    }
+}
+	);
+        }
+    </script>
+
+    <!---->
+    <!--User Profile Data End-->
+</head>
+    
+<body>
+
+<div class="container">
+	<div class="header">
+    	<div class="header-bg"></div>
+        <div class="header-profile">
+        </div>
+    </div>
+    <div style="clear:both"></div>
+<div class="page-heading-bg" style="margin-top: 3%;">
+	<div class="page-heading">Email Form</div>
+</div>
+<div class="content-area">
+	<div class="input-bg">
+    <input type="text" value="Email From" style="border-right:1px solid #FFF; width:20%;" />
+    <input type="text" id="txtEmailFrom" />
+  <!--  <a href=""><img src="images/edit-icon.png" style="float:right; margin:10px;" /></a>-->
+    </div>
+    
+    <div class="input-bg">
+    <input type="text" value="Email To" style="border-right:1px solid #FFF; width:20%;" />
+    <input type="text" id="txtEmailTo" />
+    <!--<a href=""><img src="images/edit-icon.png" style="float:right; margin:10px;" /></a>-->
+    </div>
+    
+    <div class="input-bg">
+    <input type="text" value="Subject" style="border-right:1px solid #FFF; width:20%;" />
+    <input type="text" id="txtSubject" />
+    <!--<a href=""><img src="images/edit-icon.png" style="float:right; margin:10px;" /></a>-->
+    </div>
+    
+    <div class="input-bg" style="height:auto">
+    <input type="text" value="Message" style="border-right:1px solid #FFF; width:20%; height:200px " />
+    <input type="text" id="txtMessage" 
+    style="width: 65%; height: 200px" />
+    <!--<a href=""><img src="images/edit-icon.png" style="float:right; margin:10px;" /></a>-->
+    </div>
+    
+    <div class="input-bg" style="margin-bottom:50px !important">
+    <input type="button" id="btnSendEmail" value="Send" />
+    </div>
+    
+</div>
+<div class="footer-area">
+<ul class="footer">
+<div style="margin-left: -3.5%;">
+	<li id="profile">
+    <a href="Profile.html" ><div class="profile-icon"></div></a>
+    </li>
+    <li id="email">
+    <a href="Email.html" class="active" >
+    <div class="email-icon"></div></a>
+    </li>
+    <li id="chat">
+    <a href="Contacts.html"><div class="chat-icon"></div></a>
+    </li>
+    <li id="share" style="border:none">
+    <a href="Social.html"><div class="share-icon"></div></a>
+    </li>
+    </div>
+</ul>
+</div>
+</div>
+</body>
+</html>
+

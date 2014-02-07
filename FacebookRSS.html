@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <link href="styles/style.css" rel="stylesheet" />
+    <script src="js/jquery-1.8.3.js"></script>
+    <script src="js/jquery-ui.js"></script>
+</head>
+<body>
+     <script>
+         window.fbAsyncInit = function () {
+             // init the FB JS SDK
+             FB.init({
+                 appId: '538113246260571',                        // App ID from the app dashboard
+                 channelUrl: 'channel.html',                     // Channel file for x-domain comms
+                 status: true,                                 // Check Facebook Login status
+                 xfbml: true                                  // Look for social plugins on the page
+             });
+
+             // Additional initialization code such as adding Event Listeners goes here
+         };
+
+         // Load the SDK asynchronously
+         (function () {
+             // If we've already installed the SDK, we're done
+             if (document.getElementById('facebook-jssdk')) { return; }
+
+             // Get the first script element, which we'll use to find the parent node
+             var firstScriptElement = document.getElementsByTagName('script')[0];
+
+             // Create a new script element and set its id
+             var facebookJS = document.createElement('script');
+             facebookJS.id = 'facebook-jssdk';
+
+             // Set the new script's source to the source of the Facebook JS SDK
+             facebookJS.src = '//connect.facebook.net/en_US/all.js';
+
+             // Insert the Facebook JS SDK into the DOM
+             firstScriptElement.parentNode.insertBefore(facebookJS, firstScriptElement);
+         }());
+</script>
+    <div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=538113246260571";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="container">
+        <div class="header">
+            <div class="header-bg">
+                 <div id="xyz" class="page-heading">Facebook</div>
+            </div>
+
+        </div>
+    </div>
+    <div class="content-area">
+     <iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FLylaSolutions&amp;width=25&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=538113246260571" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:290px;" allowTransparency="true"></iframe>
+
+    </div>
+
+    <div class="footer-area">
+        <ul class="footer">
+            <div style="margin-left: -3.5%;">
+                <li id="profile">
+                    <a href="Profile.html">
+                        <div class="profile-icon"></div>
+                    </a>
+                </li>
+                <li id="email">
+                    <a href="Email.html">
+                        <div class="email-icon"></div>
+                    </a>
+                </li>
+                <li id="chat">
+                    <a href="Contacts.html">
+                        <div class="chat-icon"></div>
+                    </a>
+                </li>
+                <li id="share" style="border: none">
+                    <a href="Social.html" class="active">
+                        <div class="share-icon"></div>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </div>
+</body>
+</html>

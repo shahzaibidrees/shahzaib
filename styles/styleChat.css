@@ -1,0 +1,110 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body
+{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	font-family:Arial, Helvetica, sans-serif;	
+	background:url(../images/bg.png);
+}
+
+.sender_message
+{
+	margin: 5px 10px 5px 5px;
+	padding: 0px 15px 0px 0px;
+	background:#333;
+	border: 1px solid #CCC;
+	/*width: 45%;*/
+	color:#FFF;
+	float:left;
+	clear:both;
+	border-radius: 20px;
+}
+
+.sender_message h1 
+{
+		font-size:16px;
+		margin-left: 10px;
+}
+
+.sender_message p
+{
+		font-size:12px;
+		margin: -5px 10px 0px 15px;
+		color:#CCC;
+        padding-bottom: 15px;
+}
+
+.received_message
+{
+	margin: 5px 5px 5px 10px;
+	padding: 0px 15px 0px 0px;
+	background:#F4F4F4;
+	border: 1px solid #CCC;
+	/*width: 45%;*/
+	color:#333;
+	float: right;
+	clear:both;
+	border-radius: 20px;
+}
+
+
+.received_message h1
+{
+		font-size:16px;
+		margin-left: 10px;
+}
+
+.received_message p
+{
+		font-size:12px;
+		margin: -5px 10px 0px 15px;
+		color:#333;
+        padding-bottom: 15px;
+}
+
+
+
+.saperator
+{
+	clear:both;
+}
+
+.send_messages
+{
+	margin: 0px 0px 0px 0px;
+	padding: 10px 10px 10px 10px;
+	position:fixed;
+	bottom: 0px;
+	border-top: 1px solid #CCC;
+	width: 100%;
+	background:#FFF;	
+}
+
+.send_messages input[type=text]
+{
+	background:#CCC;
+	padding: 5px;
+	font-size:16px;
+	border: none;
+	border-radius: 5px;
+	width: 70%;
+	height: 30px;
+	float:left;	
+}
+
+.send_messages input[type=button]
+{
+	background:#333;
+	color:#FFF;
+	margin-left: 10px;
+	padding: 5px;
+	font-size:16px;
+	border: none;
+	border-radius: 5px;
+	width: 20%;
+	height: 40px;
+	float:left;	
+}

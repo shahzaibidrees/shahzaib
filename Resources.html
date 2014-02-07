@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>lyla Solution</title>    
+    <link href="styles/style.css" rel="stylesheet" />
+    <script src="js/jquery-1.8.3.js"></script>
+    <script src="js/jquery-ui.js"></script>
+  <!-- toggle menu -->
+    <script type="text/javascript">
+        $(function () {
+            // run the currently selected effect
+            function runEffect() {
+                // get effect type from
+                var selectedEffect = $("#effectTypes").val();
+
+                // most effect types need no options passed by default
+                var options = {};
+                // some effects have required parameters
+                if (selectedEffect === "scale") {
+                    options = { percent: 0 };
+                } else if (selectedEffect === "size") {
+                    options = { to: { width: 200, height: 60 } };
+                }
+                // run the effect
+                $("#effect").toggle(selectedEffect, options, 300);
+            };
+
+            // set effect from select menu value
+            $("#button").click(function () {
+                runEffect();
+                return false;
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-bg"></div>
+            
+        </div>
+         <div class="page-heading-bg">
+            <div id="xyz" class="page-heading">Resources</div>
+            <!--<button id="my-button">POP IT UP</button>-->
+        </div>
+
+    <div class="content-area">
+
+         <header>
+           
+            <select name="effects" id="effectTypes" style="display: none;">
+                <option value="drop">Drop</option>
+
+            </select>
+            <a href="#" id="button">Resources</a>
+            <div class="toggler">
+                <div id="effect" class="ui-widget-content ui-corner-all" style="display: none;">
+                    <ul id="nav">
+                        <li><a href="Page1.html">Associations</a> </li>
+                        <li><a href="Page1.html" target="_self" title="Sports">Copywriting</a> </li>
+                        <li><a href="Page1.html" title="CreateArticle" target="_self">Printing</a> </li>
+                        <li><a href="Page1.html" title="Teams" target="_self">Technology Solutions</a></li>
+                        <li><a href="Page1.html" title="Fanclubs" target="_self">Telemarketing</a></li>
+                        <li><a href="Page1.html" id="contactus" title="Contact Us">Web Design</a></li> 
+                        <li><a href="Page1.html" title="Logout" target="_self">Business Development</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!--<div>
+         <div class="input-bg" >
+            <a href="page1.html" style="color:#fff; height:16px; "> Page 1 </a>
+        </div>
+        <div class="input-bg">
+            <a href="page1.html" style="color:#fff"> Page 2 </a>
+        </div>
+        <div class="input-bg">
+            <a href="page1.html" style="color:#fff"> Page 3 </a>
+        </div>
+        <div class="input-bg">
+            <a href="page1.html" style="color:#fff"> Page 4 </a>
+        </div>
+        <div class="input-bg">
+            <a href="page1.html" style="color:#fff"> Page 5 </a>
+        </div>
+        
+        </div>-->
+
+    </div>
+
+    <div class="footer-area">
+            <ul class="footer">
+                <div style="margin-left: -3.5%;">
+                    <li id="profile">
+                        <a href="Profile.html" >
+                            <div class="profile-icon"></div>
+                        </a>
+                    </li>
+                    <li id="email">
+                        <a href="Email.html">
+                            <div class="email-icon"></div>
+                        </a>
+                    </li>
+                    <li id="chat">
+                        <a href="Contacts.html">
+                            <div class="chat-icon"></div>
+                        </a>
+                    </li>
+                    <li id="share" style="border: none">
+                        <a href="Social.html" class="active" >
+                            <div class="share-icon"></div>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+CREATE TABLE #TempMessages(
+ [UserID] [int] NULL,
+ [UserName] [varchar](50) NULL,
+ [UserEmail] [varchar](100) NULL,
+ [UserPhoto] [varchar](200) NULL,
+ [LastMessageID] [int] NULL,
+ [LastMessage] [varchar](8000) NULL,
+ [MessageDate] [datetime] NULL,
+ [MessageDateFormatted1] [varchar](50) NULL,
+ [MessageDateFormatted2] [varchar](50) NULL,
+ [IsreadFrom] [varchar](50) NULL,
+ [IsDeleted] [varchar](50) NULL,
+ [FromUserID] [int] NULL,
+ [IsreadTo] [varchar](50) NULL)
+
+Insert into #TempMessages
+(UserID)
+Select UserID    from 
+(
+SELECT Distinct tbl_Chat.ReceiverId as UserID
+FROM         tbl_Chat 
+WHERE tbl_Chat.SenderId=1
+Union                      
+SELECT Distinct tbl_Chat.SenderId
+FROM         tbl_Chat 
+WHERE tbl_Chat.ReceiverId=2
+)A
+
+update #TempMessages  set #TempMessages.UserName = A.Name,#TempMessages.UserPhoto = A.[Image]
+from tbl_user A join #TempMessages  B ON A.ID = B.UserID
+
+
+
+update #TempMessages  set LastMessageID = C.ID,LastMessage = C.[Message], 
+MessageDate = c.SendDate,
+MessageDateFormatted1=case when
+ DATEDIFF(day, c.SendDate, getdate()) = 0 then 
+ 'Today' when
+ DATEDIFF(day, c.SendDate, getdate()) = 1 then 
+ 'Yesterday'
+else  CONVERT(VARCHAR(12),c.SendDate,107)
+end,
+MessageDateFormatted2=CONVERT(VARCHAR(12),c.SendDate,107),
+IsreadFrom  = C.IsReadFrom,
+IsDeleted  = C.IsDeleted,
+FromUserID=C.SenderId,
+IsreadTo  = C.IsReadTo
+from 
+tbl_Chat  C 
+, #TempMessages  D where
+ID = (select MAX(ID) from tbl_Chat  where (SenderId = D.UserID or ReceiverId = D.UserID) )
+
+
+Select * from #TempMessages Where #TempMessages.IsDeleted is null OR #TempMessages.IsDeleted ='0' OR #TempMessages.IsDeleted=#TempMessages.UserID
+Order by LastMessageID DESC
+
+
+
+Drop table #TempMessages 
+
+
