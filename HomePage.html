@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome to Main Dashboard</title>
+
+<script src="js/jquery.min.js"></script>
+
+  
+<link href="css/MainDashboard.css" rel="stylesheet" type="text/css" />
+
+
+    
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+ContentHandle();
+DateTimeDisplay();
+
+	$(window).resize(function(){
+		ContentHandle();
+	}); 
+
+
+/*if($(".SearchArea").css("display") != "none")
+{
+	alert("ok");
+}*/
+
+}); 
+
+
+
+function ContentHandle()
+{
+	var screenWidth = $(window).width();
+	var screenheight = $(window).height();	
+	//var RightAreaWidth = parseInt(screenWidth-290);
+	//var leftBarHeight = $(".LeftBar").height();
+	//var SetleftBarHeight = parseInt(screenheight+50);
+	//alert(screenWidth);
+	//$(".LeftBar").css("height", + screenheight);
+	//$(".RightArea").css("width", + RightAreaWidth);
+/*
+	var leftContentHeight = $(".LeftbarContent").height();
+	var SetLeftSmallHeight = parseInt(leftContentHeight+25);
+	
+	if(screenheight<leftContentHeight)
+	{
+	$(".LeftBar").css("height", + SetLeftSmallHeight);		
+	}*/
+	
+	
+	
+	if(screenWidth>600)
+	{
+		$(".SearchArea input[type=text]").val("Search Here...");
+		$(".SearchArea input[type=text]").css("color","#999999");
+		$(".SearchArea").css("display","block");
+		//Search Area Focus in.	
+	  $(".SearchArea input[type=text]").focus(function(){
+		if(SearchFrm.SearchBox.value=="Search Here..." || SearchFrm.SearchBox.value=="")
+		{
+		  $(".SearchArea input[type=text]").val(""); 
+		}	
+		  $(".SearchArea input[type=text]").css("width","300px");
+		$(".SearchArea input[type=text]").css("color","#333");
+		  $(".SearchArea input[type=text]").focus(); 
+	   });
+	//Search Area Focus out.	
+	  $(".SearchArea").focusout(function(){
+		if(SearchFrm.SearchBox.value=="Search Here..." || SearchFrm.SearchBox.value=="")
+		{
+			  $(".SearchArea input[type=text]").css("width","80px");
+			  $(".SearchArea input[type=text]").val("Search Here...");
+			  $(".SearchArea input[type=text]").css("color","#999999");
+		} 
+	  });
+		
+	}
+	else
+	{
+		$(".SearchArea").css("display","none");
+	}
+}
+
+function DateTimeDisplay()
+{
+var monthNames = [ "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December" ];
+var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+var newDate = new Date();
+newDate.setDate(newDate.getDate());    
+$('.icoArea p').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+}
+</script>
+
+
+	<script src="editor/ckeditor.js"></script>
+
+	<script>
+
+		CKEDITOR.on( 'instanceReady', function( evt ) {
+			var editor = evt.editor;
+			//editor.setData( 'This editor has it\'s tabIndex set to <strong>' + editor.tabIndex + '</strong>' );
+
+			// Apply focus class name.
+			editor.on( 'focus', function() {
+				editor.container.addClass( 'cke_focused' );
+			});
+			editor.on( 'blur', function() {
+				editor.container.removeClass( 'cke_focused' );
+			});
+
+			// Put startup focus on the first editor in tab order.
+			if ( editor.tabIndex == 1 )
+				editor.focus();
+		});
+
+	</script>
+
+
+
+</head>
+
+<body>
+<div align="center">
+
+
+<!--Top Header-->
+<div class="TopHeader">
+    <p class="WebName">Nabeel Shaukat Ali</p>
+    <div class="SearchArea">
+    <form action="#" method="post" name="SearchFrm">
+        <input type="text" name="SearchBox" />
+        <input type="submit" name="SearchBtn" />
+    </form>
+    </div>
+</div>
+<!--Top Header-->
+
+<!--Contents Area-->
+<div class="ContentArea">
+	
+    <!--Left Area-->
+    <div class="LeftBar">
+    
+    <div class="LeftbarContent">	
+        <div class="UserArea">
+        	<img src="images/user.jpg" />
+            <p class="AdminName">Shahzaib Idrees</p>
+            <p class="AdminEmail">shahzaibidrees@gmail.com</p>
+            <a href="#" class="SignOut">Sign Out</a>
+            
+            <a href="#" class="Users">
+            <p class="Count">120</p>
+            <p class="Heading">Notification</p>
+            </a>
+        </div>
+     </div>
+     
+    </div>
+    <!--Left Area-->
+    
+    <!--Right Area-->
+    <div class="RightArea">
+    	
+        <div class="icoArea">
+        	<a href="#"><img src="images/Drop_Menu.jpg" /></a>
+            <a href="#"><img src="images/Dashboard_ICO.jpg" /></a>
+            <p>February 28, 2014 - Friday</p>
+        </div>
+        
+        <div class="partition"></div>
+        
+        <div class="Menu">
+        	<ul>
+            	<li class="home"><a href="#"><img src="images/Home_ICO.png" /><label>Home</label></a></li>
+            	<li class="home"><a href="#"><img src="images/Audio_ICO.png" /><label>Audios</label></a></li>
+            	<li class="home"><a href="#"><img src="images/Video_ICO.png" /><label>Videos</label></a></li>
+            	<li class="home"><a href="#"><img src="images/Photos_ICO.png" /><label>Photos</label></a></li>
+            	<li class="home"><a href="#"><img src="images/Calender_ICO.png" /><label>Events</label></a></li>
+            	<li class="home"><a href="#"><img src="images/Message_ICO.png" /><label>Messages</label></a></li>
+            </ul>
+        </div>
+        
+        <div class="partition"></div>
+        
+        <!--About us-->
+        <div class="FormAbt" align="center">
+			
+            <table border="0" align="center">
+            	<tr>
+                	<td height="33"><h2>Welcome to Main Page</h2></td>
+                </tr>
+            	<tr>
+                	<td height="47"><input type="text" /></td>
+                </tr>
+            	<tr>
+                	<td height="124">
+                    <textarea class="ckeditor" cols="80" id="editor4" rows="10"></textarea>
+                    </td>
+                </tr>
+            	<tr>
+                	<td><input type="submit" value="Add / Update" /></td>
+                </tr>
+            </table>
+                        
+        </div>
+        <!--About us-->
+        
+    </div>
+    <!--Right Area-->
+
+</div>
+<!--Contents Area-->
+
+</div>
+
+
+</body>
+</html>
