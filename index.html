@@ -1,44 +1,121 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-</script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 
-<script language="javascript">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
 
-$(document).ready(function() {
+<link rel="stylesheet" href="css/Ipad_Landscape.css">
+<link rel="stylesheet" href="css/Ipad_Potriate.css">
+<link rel="stylesheet" href="css/Adroid_Mobile.css">
+<link rel="stylesheet" href="css/Mini_ipad.css">
+<link rel="stylesheet" href="css/Smart_Phones.css">
 
-var username = "Shazaib";
-var password = "12345";
 
-		$.ajax({
-		type:"GET",
-		url:"http://skysol.co.uk/MobileTest/check.php",
-		data:"username=" + username + "&password=" + password,
-        contentType: "application/json; charset=utf-8",
-		dataType:"html",
-		
-		success:function(result){
 
-			alert(result);
-			alert("Status OK");
-		  },
-		  
-        error: function (Viewerror) {
-			alert(Viewerror);
-        }
-		  
-		  });
-		  
-  
-});
-
-</script>
+<title>Big Horn Dispatch</title>
 </head>
 
 <body>
+
+<!--Top Header Start-->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+			<a class="navbar-brand" href="#">BIG HORN DISPATCH</a>
+        </div>
+   
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+    
+        <a href="#" class="navICOmenu"><img src="images/menuICO.png" /></a>
+        <input type="text" class="NavSearch" placeholder="Search Here.." />
+        
+        <div class="userinfo pull-right">
+            <img src="images/userAVATAR.jpg" />
+            <p>username</p>
+        </div>        
+    
+    </div>
+
+</div>
+<!--Top Header End-->
+
+
+<div class="container-fluid">
+
+<!--Sile Bar Left-->
+<div class="sidebar">
+
+
+	<!--User Area Start-->
+    <div class="userarea">
+    	<img src="images/userAVATAR.jpg" />
+        <p>username</p>
+        <span>Admin</span>
+    </div>
+	<!--User Area ENd-->
+
+<input type="text" class="AdvancedSearch" placeholder="Advanced Search..." />
+
+<ul>
+	<li><a href="#"><img src="images/OrderICO.png" /><span>Orders</span></a></li>
+	<li><a href="#"><span>Settings</span></a></li>
+</ul>
+
+</div>
+<!--Sile Bar Left-->
+
+<!--Sile Bar Left-->
+<div class="main">
+	
+    <h1 class="page-header Home-ICO">Dashboard</h1>
+    
+    <div class="navbar navbar-default DashboardNav">
+    	<ul class="nav navbar-nav">
+        	<li><a href="#" class="active">Dashboard</a></li>
+        	<li><a href="#">Home</a></li>
+        	<li><a href="#">About us</a></li>
+        	<li><a href="#">Contact us</a></li>
+        </ul>
+    </div>
+    
+    
+    <h1 class="h3">Main Menu</h1>
+    
+    <div class="MainNavLinks">
+    	
+        <ul>
+        	<li><a href="#" class="carriers">CARRIERS</a></li>
+        	<li><a href="#" class="customers">CUSTOMERS</a></li>
+        	<li><a href="#" class="quotes">QUOTES</a></li>
+        	<li><a href="#" class="reports">REPORTS</a></li>
+        	<li><a href="#" class="loads">LOADS</a></li>
+        	<li><a href="#" class="phone">PHONE</a></li>
+        	<li><a href="#" class="switchboard">SWITCH BOARD</a></li>
+        </ul>
+        
+    </div>
+    
+    
+</div>
+<!--Sile Bar Left-->
+</div>
+
+
 </body>
 </html>

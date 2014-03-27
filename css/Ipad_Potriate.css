@@ -1,0 +1,369 @@
+@charset "utf-8";
+/* CSS Document */
+
+@media all 
+and (min-width: 768px) 
+and (max-width: 1023px) 
+and (orientation : portrait)
+{
+
+
+.navbar-default
+{
+	background:#FFF;
+}
+
+.navbar-brand
+{
+	font-size:18px;
+	font-weight:bold;
+	color:#333 !important;	
+}
+
+.navICOMainNavLinks
+{
+	float:left;
+	margin: 1px 0px 0px 20px;
+	padding: 0px 0px 0px 3px;
+	color: transparent;
+	border-left:1px solid #CCC;	
+	height:48px;
+	width:48px;
+}
+
+.NavSearch
+{
+	float:left;
+	margin: 1px 0px 0px 6px;
+	padding: 13px 30px 15px 10px;
+	color: #333;
+	font-size:16px;
+	border:none;
+	border-left:1px solid #CCC;
+	border-right:1px solid #CCC;
+	background:url(../images/NavSearchICO.png) right center no-repeat;
+	outline:none;	
+	width:300px;	
+}
+
+.navbar .userinfo
+{
+	margin: 0px 10px 0px 0px;
+	padding: 0px 0px 0px 0px;	
+}
+
+
+.navbar .userinfo img
+{
+	margin: 3px 10px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	border-radius:100%;
+	overflow:hidden;
+	width:45px;
+	height:43px;
+	float:left;	
+}
+
+.navbar .userinfo p
+{
+	margin: 10px 10px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	float:left;	
+	font-size:16px;
+	color:#666;
+}
+
+
+.page-header
+{	
+	font-size:24px;
+	margin-bottom:10px;
+}
+
+.Home-ICO
+{
+	padding:8px 0px 13px 49px;
+	background:url(../images/homeICO.png) top left no-repeat;	
+}
+
+.sidebar
+{
+	position: fixed;
+	top: 51px;
+	bottom: 0;
+	left: 0;
+	width:240px;
+	z-index: 1000;
+	display: block;
+	padding: 2px 0px 2px 0px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: #394263;
+	border-right: 1px solid #eee;	
+}
+
+
+.sidebar .userarea
+{
+	margin:0px 0px 0px 0px;
+	padding:10px 10px 10px 10px;
+	height:85px;
+	width:100%;
+	display:block;
+	background:#4d5573;
+}
+
+.sidebar .userarea img
+{
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	height:60px;
+	border-radius:100%;
+	overflow:hidden;
+	width:60px;
+	float:left;
+}
+
+.sidebar .userarea p
+{
+	margin:6px 0px 0px 10px;
+	padding:0px 0px 0px 0px;
+	float:left;
+	color:#FFF;
+	font-size:18px;
+}
+
+.sidebar .userarea span
+{
+	margin:0px 0px 0px 10px;
+	padding:0px 0px 0px 0px;
+	float:left;
+	color:#FFF;
+	font-size:14px;
+	width:50%;
+}
+
+
+.sidebar .AdvancedSearch
+{
+	margin:0px 0px 0px 0px;
+	padding:10px 0px 10px 10px;
+	font-size:14px;
+	border:none;
+	background:url(../images/NavSearchICO.png) right center no-repeat #FFF;
+	outline:none;
+	width:100%;
+}
+
+
+.sidebar ul
+{
+	margin:2px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	display:block;
+}
+
+.sidebar ul li
+{
+	margin:0px 0px 3px 0px;
+	padding:0px 0px 0px 0px;
+	clear:both;
+}
+
+.sidebar ul li a
+{
+	margin:0px 0px 0px 0px;
+	padding:10px 0px 10px 0px;
+	text-align:center;
+	display:block;
+	color:#FFF;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+
+.sidebar ul li:nth-child(1) a:hover, .sidebar ul li:nth-child(2) a:hover
+{background:#4d5573; text-decoration:none;}
+
+.sidebar ul li:nth-child(1) a{background:#3ca2bb;}
+.sidebar ul li:nth-child(2) a{background:#ee8366;}
+
+.sidebar ul li a img
+{
+	margin-bottom:5px;
+}
+
+.sidebar ul li a span
+{
+	display:block;
+	clear:both;
+	text-align:center;
+}
+
+
+.main
+{
+	margin:0px 0px 0px 0px;
+	padding: 25px 0px 20px 250px;
+	position:relative;
+	width:100%;	
+}
+
+.main .DashboardNav
+{
+	width:99%;
+}
+
+.main .nav{margin-left:0px;}
+.main .nav>li>a {padding-left:10px;}
+.main .nav>li>a.active {color:#333;}
+
+.main .nav>li>a:hover {
+	background:#32434d;
+	color:#FFF;
+}
+
+
+.main .h3
+{
+	margin:0px;
+	padding:0px 0px 0px 5px;
+	clear:both;
+}
+
+.main .MainNavLinks
+{
+	margin:10px 0px 0px 0px;
+	padding:0px 0px 0px 5px;
+	clear:both;
+	display:block;
+	width:99%;
+	overflow:hidden;
+}
+
+
+.main .MainNavLinks ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: block;
+	border: 0;
+	max-width: 100%;
+	overflow: visible;
+}
+
+.main .MainNavLinks ul li
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	display:inline-block;
+	list-style:none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width:13.5%;
+}
+
+.main .MainNavLinks ul li a
+{
+	margin: 0px 0px 0px 0px;
+	padding: 60px 10px 15px 10px;
+	color:#f0f0f0;
+	width: 100%;
+	text-decoration:none;
+	display:block;
+	font-size:10px;
+	border-radius:1px;
+	overflow:hidden;
+	text-align:center;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+
+
+.main .MainNavLinks ul li a.carriers
+{	
+	background:url(../images/carriers.png);
+	background-color: #d65c4f;
+	background-position: center 10px;
+	background-repeat: no-repeat;
+}
+
+.main .MainNavLinks ul li a.customers
+{	
+	background:url(../images/customers.png);
+	background-color: #65b688;
+	background-position: center 10px;
+	background-repeat: no-repeat;
+}
+
+.main .MainNavLinks ul li a.quotes
+{	
+	background:url(../images/quotes.png);
+	background-color: #3ca2bb;
+	background-position: center 10px;
+	background-repeat: no-repeat;
+}
+
+.main .MainNavLinks ul li a.reports
+{	
+	background:url(../images/reports.png);
+	background-color: #32434d;
+	background-position: center 10px;
+	background-repeat: no-repeat;
+}
+
+.main .MainNavLinks ul li a.loads
+{	
+	background:url(../images/loads.png);
+	background-color: #ee8366;
+	background-position: center 10px;
+	background-repeat: no-repeat;
+}
+
+.main .MainNavLinks ul li a.phone
+{	
+	background:url(../images/phone.png);
+	background-color: #65b688;
+	background-position: center 10px;
+	background-repeat: no-repeat;
+}
+
+.main .MainNavLinks ul li a.switchboard
+{	
+	background:url(../images/switchBoard.png);
+	background-color: #3ca2bb;
+	background-position: center 10px;
+	background-repeat: no-repeat;
+}
+
+
+.main .MainNavLinks ul li a img
+{
+	display:block;
+	clear:both;
+	border:none;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+
+.main .MainNavLinks ul li a span
+{
+	margin: 5px 0px 0px 0px;
+	display:block;
+	clear:both;
+	font-size:14px;
+	cursor:pointer;
+}
+	
+}
